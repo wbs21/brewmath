@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="85%" cy="12%" r="70%">
+      <stop offset="0" stop-color="#c47d20" stop-opacity=".34"/>
+      <stop offset=".55" stop-color="#6f4719" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#120e0a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5c35e"/>
+      <stop offset="1" stop-color="#d9952d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="#120e0a"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <circle cx="1004" cy="458" r="246" fill="none" stroke="#e4a53e" stroke-opacity=".12"/>
+  <circle cx="1004" cy="458" r="320" fill="none" stroke="#e4a53e" stroke-opacity=".07"/>
+  <g transform="translate(82 86)">
+    <rect width="74" height="74" rx="18" fill="#241a11" stroke="#e4a53e" stroke-opacity=".35"/>
+    <g transform="translate(12 10)">
+      <path d="M25 50V12" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="25" cy="9.5" rx="5" ry="3.4" fill="url(#gold)"/>
+      <g fill="url(#gold)" transform="rotate(-33 16 20)">
+        <rect x="11" y="17" width="11" height="5" rx="2.5"/>
+        <rect x="11" y="26" width="11" height="5" rx="2.5"/>
+        <rect x="11" y="35" width="11" height="5" rx="2.5"/>
+      </g>
+      <g fill="url(#gold)" transform="rotate(33 34 20)">
+        <rect x="29" y="17" width="11" height="5" rx="2.5"/>
+        <rect x="29" y="26" width="11" height="5" rx="2.5"/>
+        <rect x="29" y="35" width="11" height="5" rx="2.5"/>
+      </g>
+    </g>
+    <text x="92" y="48" fill="#f7efe3" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="32" font-weight="650">BrewMath</text>
+  </g>
+  <text x="82" y="232" fill="#e4a53e" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="18" font-weight="700" letter-spacing="4">HOMEBREW CALCULATOR + NOTEBOOK</text>
+  <text x="82" y="318" fill="#f7efe3" font-family="Iowan Old Style,Palatino,Georgia,serif" font-size="68" font-weight="600" letter-spacing="-2">Brew with numbers</text>
+  <text x="82" y="387" fill="#f7efe3" font-family="Iowan Old Style,Palatino,Georgia,serif" font-size="68" font-weight="600" letter-spacing="-2">you can trust.</text>
+  <text x="82" y="465" fill="#bfb2a2" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="24">Calculate. Taste. Attribute. Repeat what works.</text>
+  <g transform="translate(760 90) rotate(4 180 220)" filter="url(#shadow)">
+    <rect width="348" height="486" rx="46" fill="#090604" stroke="#c6974b" stroke-opacity=".32" stroke-width="2"/>
+    <rect x="10" y="10" width="328" height="466" rx="38" fill="#1a130d"/>
+    <rect x="130" y="20" width="88" height="22" rx="11" fill="#080504"/>
+    <rect x="35" y="72" width="278" height="108" rx="20" fill="#2a1e13" stroke="#e4a53e" stroke-opacity=".16"/>
+    <rect x="52" y="89" width="72" height="72" rx="18" fill="#7c4616"/>
+    <text x="142" y="111" fill="#f7efe3" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="20" font-weight="650">IBU Calculator</text>
+    <text x="142" y="137" fill="#8f8375" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="13">Tinseth · Rager</text>
+    <text x="35" y="224" fill="#e4a53e" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="12" font-weight="700" letter-spacing="2">QUICK TOOLS</text>
+    <g fill="#241a12" stroke="#e4a53e" stroke-opacity=".14">
+      <rect x="35" y="246" width="128" height="92" rx="17"/>
+      <rect x="177" y="246" width="136" height="92" rx="17"/>
+      <rect x="35" y="350" width="128" height="92" rx="17"/>
+      <rect x="177" y="350" width="136" height="92" rx="17"/>
+    </g>
+    <g fill="#f7efe3" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="16" font-weight="650">
+      <text x="51" y="283">ABV</text>
+      <text x="193" y="283">Gravity</text>
+      <text x="51" y="387">Priming</text>
+      <text x="193" y="387">Water</text>
+    </g>
+    <g fill="#8f8375" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="11">
+      <text x="51" y="306">Alcohol</text>
+      <text x="193" y="306">SG · Plato</text>
+      <text x="51" y="410">Bottle sugar</text>
+      <text x="193" y="410">Salts · pH</text>
+    </g>
+  </g>
+  <rect x="82" y="531" width="430" height="1" fill="#e4a53e" fill-opacity=".22"/>
+  <text x="82" y="570" fill="#8f8375" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-size="18">iPhone + iPad · No account · No ads · No subscription</text>
+</svg>

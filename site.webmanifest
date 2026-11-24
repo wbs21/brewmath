@@ -1,0 +1,21 @@
+{
+  "name": "BrewMath — Homebrew Calculator & Brew Log",
+  "short_name": "BrewMath",
+  "description": "Brewing calculators, recipe snapshots and a repeatable homebrewing experiment loop for iPhone and iPad.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#120e0a",
+  "theme_color": "#120e0a",
+  "icons": [
+    {
+      "src": "assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

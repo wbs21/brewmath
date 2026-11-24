@@ -1,0 +1,25 @@
+# BrewMath
+
+> BrewMath is an offline homebrew calculator and brew log for iPhone and iPad.
+
+## Canonical pages
+
+- [BrewMath home](https://brewmath.app/): app overview, calculator list, experiment loop and FAQ.
+- [Data sources](https://brewmath.app/data-sources.html): BJCP editions, brewing formula references and stated limitations.
+- [Support](https://brewmath.app/support.html): purchase restoration, backups, iCloud Drive and troubleshooting.
+- [Privacy](https://brewmath.app/privacy.html): no developer account, analytics or advertising; local data and optional user iCloud Drive backups.
+
+## Product facts
+
+- App name: BrewMath: Brew Calculator
+- Platform: iPhone and iPad, iOS 18 or later
+- Business model: free calculators and unlimited batches, with one optional one-time Pro purchase
+- Account required: no
+- Advertising: no
+- Developer analytics: no
+- Offline calculations: yes
+- Data sources: official BJCP style PDFs, public brewing formulas and manufacturer ingredient references
+
+## Contact
+
+support@brewmath.app

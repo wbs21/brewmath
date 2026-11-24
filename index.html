@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewMath — Homebrew Calculator, Brew Log &amp; Recipe Notes</title>
+  <meta name="description" content="BrewMath is an offline homebrew calculator and brew log for iPhone and iPad. Calculate IBU, ABV, gravity, priming sugar, water salts and track repeatable brewing experiments.">
+  <meta name="theme-color" content="#120e0a">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://brewmath.app/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/app-icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="BrewMath">
+  <meta property="og:title" content="BrewMath — Homebrew Calculator &amp; Experiment Log">
+  <meta property="og:description" content="Calculate the brew day. Record the recipe. Taste the change. Build a repeatable house recipe from your own batches.">
+  <meta property="og:url" content="https://brewmath.app/">
+  <meta property="og:image" content="https://brewmath.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BrewMath homebrew calculator and brew log for iPhone and iPad">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BrewMath — Homebrew Calculator &amp; Experiment Log">
+  <meta name="twitter:description" content="Brewing calculators, recipe snapshots and a repeatable experiment loop for iPhone and iPad.">
+  <meta name="twitter:image" content="https://brewmath.app/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://brewmath.app/#website",
+        "url": "https://brewmath.app/",
+        "name": "BrewMath",
+        "description": "Homebrew calculators, recipe snapshots and a repeatable brewing experiment log for iPhone and iPad.",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://brewmath.app/#app",
+        "name": "BrewMath: Brew Calculator",
+        "url": "https://brewmath.app/",
+        "description": "An offline homebrew calculator and brew log with IBU, ABV, gravity, priming sugar, water chemistry, recipe snapshots, tasting notes and house-recipe versioning.",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Food & Drink",
+        "operatingSystem": "iOS 18 or later",
+        "isAccessibleForFree": true,
+        "inLanguage": "en-US",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "All calculators and unlimited batches are free. An optional one-time Pro purchase unlocks insights, recipe history and export tools."
+        },
+        "featureList": [
+          "IBU calculator with Tinseth and Rager models",
+          "ABV and attenuation calculator",
+          "Gravity, Plato and Brix conversion",
+          "Priming sugar calculator",
+          "Strike water and water salt calculators",
+          "BJCP beer, mead and cider style comparison",
+          "Recipe snapshots and experiment diffs",
+          "Tasting notes and house-recipe versions"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://brewmath.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is BrewMath an IBU calculator too?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. BrewMath includes an IBU calculator with Tinseth and Rager models, hop-use corrections and a full brew-day timer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BrewMath require an account or subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. BrewMath has no account, advertising or subscription. All calculators and unlimited batches are free, with one optional one-time Pro purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can BrewMath track brewing experiments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Each batch stores a frozen recipe snapshot. BrewMath compares later batches with their parent, records tasting verdicts and can promote a repeatable version into a numbered house recipe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BrewMath work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Calculations, batch notes, recipe data and reference tables work offline. iCloud Drive backup is optional and uses the user's own Apple account."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="BrewMath home">
+        <img src="assets/app-icon-96.png" width="36" height="36" alt="">
+        <span>BrewMath</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+        <a href="#calculators">Calculators</a>
+        <a href="#experiment-loop">Experiment loop</a>
+        <a href="data-sources.html">Data sources</a>
+        <a href="support.html">Support</a>
+        <a class="button small" href="#release-status" data-app-store aria-disabled="true">
+          <span data-store-label>Coming to the App Store</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">iPhone and iPad · Brewing calculator + notebook</p>
+          <h1 id="hero-title">Brew with numbers you can trust. <em>Learn from every batch.</em></h1>
+          <p class="hero-copy">
+            BrewMath combines the calculators you need on brew day with a recipe history that remembers
+            what changed, what you tasted and what is worth brewing again.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#release-status" data-app-store aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16.7 12.8c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.5 1.2 9.9.8 1.2 1.8 2.5 3.1 2.4 1.2-.1 1.7-.8 3.3-.8 1.5 0 2 .8 3.3.8 1.4 0 2.3-1.2 3.1-2.4.9-1.4 1.3-2.8 1.3-2.9-.1 0-3-1.1-3-3.9ZM14.2 5.5c.7-.9 1.2-2.1 1.1-3.3-1.1 0-2.4.7-3.2 1.6-.7.8-1.3 2-1.1 3.2 1.2.1 2.4-.6 3.2-1.5Z" fill="currentColor"/>
+              </svg>
+              <span data-store-label>Coming to the App Store</span>
+            </a>
+            <a class="button secondary" href="#experiment-loop">See how the loop works</a>
+          </div>
+          <p class="release-note" id="release-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-release-status>BrewMath is preparing for App Store release.</span>
+          </p>
+          <div class="trust-strip" aria-label="Product principles">
+            <span>No account</span>
+            <span>No ads</span>
+            <span>No subscription</span>
+            <span>Works offline</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="BrewMath app dashboard">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="device float">
+            <img src="assets/screenshot-home.jpg" width="603" height="1311" alt="BrewMath dashboard showing brewing calculators and recent batches">
+          </div>
+          <div class="floating-card" aria-hidden="true">
+            <small>This iteration</small>
+            <strong>One variable changed</strong>
+            <span>Compare the result, then repeat.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="calculators" aria-labelledby="calculators-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Brew-day essentials</p>
+            <h2 id="calculators-title">The calculators are free. <em>Use all of them.</em></h2>
+            <p class="section-lead">
+              Large numbers, a keypad built for wet hands and results you can read from across the kettle.
+              Every calculator remains available without a purchase.
+            </p>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">IBU</div>
+            <h3>IBU calculator</h3>
+            <p>Compare Tinseth and Rager, with hop form, timing and whirlpool handling.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">ABV</div>
+            <h3>ABV &amp; attenuation</h3>
+            <p>Standard and Hall estimates, apparent attenuation and final gravity context.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">SG</div>
+            <h3>Gravity converter</h3>
+            <p>Switch between specific gravity, °Plato and Brix without re-entering the number.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">CO₂</div>
+            <h3>Priming sugar</h3>
+            <p>Dose against the volume you actually packaged, not the batch size you planned.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">°C</div>
+            <h3>Strike water</h3>
+            <p>Calculate strike temperature, water volume, grain absorption and sparge volume.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">SRM</div>
+            <h3>Colour &amp; efficiency</h3>
+            <p>Morey colour with SRM/EBC, plus reverse-engineered brewhouse efficiency.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">ppm</div>
+            <h3>Water salts</h3>
+            <p>See ion contributions and sulfate-to-chloride balance before you treat the water.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">⏱</div>
+            <h3>Brew-day timer</h3>
+            <p>Mash, boil and hop additions stay useful when the phone is locked or the app is closed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="notebook-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">More than a calculator</p>
+            <h2 id="notebook-title">Turn brew-day notes into <em>your own house recipe.</em></h2>
+            <p class="section-lead">
+              A recipe is more useful when it remembers the process behind it. BrewMath stores each
+              batch as a frozen snapshot, then makes the next decision easier.
+            </p>
+          </div>
+        </div>
+        <div class="three-grid">
+          <article class="story-card reveal">
+            <div class="copy">
+              <h3>See every change</h3>
+              <p>Compare a batch with the version it came from: grain, hops, yeast, water, temperature, packaging and more.</p>
+            </div>
+            <img src="assets/screenshot-batch.jpg" width="603" height="1311" loading="lazy" alt="BrewMath batch detail comparing a beer with its BJCP style ranges">
+          </article>
+          <article class="story-card reveal">
+            <div class="copy">
+              <h3>Start with flavour</h3>
+              <p>Choose bitterness, body, sweetness and colour. BrewMath turns the direction into concrete targets and a plausible style.</p>
+            </div>
+            <img src="assets/screenshot-flavor.jpg" width="603" height="1311" loading="lazy" alt="BrewMath flavour-first brewing controls and style suggestion">
+          </article>
+          <article class="story-card reveal">
+            <div class="copy">
+              <h3>Count what worked</h3>
+              <p>Tasting verdicts become a clear count of which changes helped, hurt or did nothing across your own batches.</p>
+            </div>
+            <img src="assets/screenshot-insights.jpg" width="603" height="1311" loading="lazy" alt="BrewMath insights showing which recipe changes helped across brewed batches">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="experiment-loop" aria-labelledby="loop-title">
+      <div class="container loop-grid">
+        <div class="loop-visual reveal">
+          <img src="assets/screenshot-share.jpg" width="603" height="1311" loading="lazy" alt="BrewMath sharing a finished brew summary card">
+        </div>
+        <div>
+          <p class="eyebrow">A repeatable experiment loop</p>
+          <h2 id="loop-title">Brew. Taste. Attribute. <em>Repeat what works.</em></h2>
+          <p class="section-lead">
+            BrewMath does not pretend a few batches are a scientific study. It gives your own tasting
+            decisions a memory, so every iteration starts from evidence rather than recollection.
+          </p>
+          <ol class="step-list">
+            <li class="reveal">
+              <h3>Save the exact version</h3>
+              <p>The batch keeps its own recipe snapshot, even if the calculator inputs change later.</p>
+            </li>
+            <li class="reveal">
+              <h3>Change one thing</h3>
+              <p>Single-variable mode helps keep the next experiment attributable.</p>
+            </li>
+            <li class="reveal">
+              <h3>Record the verdict</h3>
+              <p>Mark whether each change helped, hurt, did nothing or remains uncertain.</p>
+            </li>
+            <li class="reveal">
+              <h3>Promote the winner</h3>
+              <p>Turn a proven batch into v1, v2 and onward, then branch the next experiment from the current house version.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="honest-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Transparent by design</p>
+            <h2 id="honest-title">Useful estimates. <em>No invented certainty.</em></h2>
+          </div>
+        </div>
+        <div class="compare-grid">
+          <article class="content-card accent reveal">
+            <h3>Know where the numbers come from</h3>
+            <p>BrewMath names the published model used for each calculation and highlights where models disagree.</p>
+            <ul class="check-list">
+              <li>IBU ranges and style targets include their BJCP edition.</li>
+              <li>Raw ingredient data is sourced from public manufacturer information.</li>
+              <li>Results are labelled as estimates, not laboratory measurements.</li>
+              <li>Versioned JSON datasets can be inspected and updated independently.</li>
+            </ul>
+            <p><a href="data-sources.html">Read the data and formula sources</a></p>
+          </article>
+          <article class="content-card reveal">
+            <h3>Your data stays yours</h3>
+            <p>No BrewMath account, developer server, analytics SDK or advertising network.</p>
+            <ul class="check-list">
+              <li>Batches and tasting notes live on your device.</li>
+              <li>Backups can also be copied to your own iCloud Drive.</li>
+              <li>Deleting the app removes local app data.</li>
+              <li>Purchases are handled by Apple through StoreKit.</li>
+            </ul>
+            <p><a href="privacy.html">Read the privacy policy</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" aria-labelledby="screens-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Built for the brew day</p>
+            <h2 id="screens-title">Dark, legible and <em>deliberately focused.</em></h2>
+            <p class="section-lead">The interface is designed to stay readable beside a boiling kettle and comfortable on both iPhone and iPad.</p>
+          </div>
+        </div>
+        <div class="screenshot-rail">
+          <figure class="screenshot-card reveal">
+            <img src="assets/screenshot-home.jpg" width="603" height="1311" loading="lazy" alt="BrewMath calculator dashboard">
+            <figcaption>Every tool and recent batch on one screen</figcaption>
+          </figure>
+          <figure class="screenshot-card reveal">
+            <img src="assets/screenshot-batch.jpg" width="603" height="1311" loading="lazy" alt="BrewMath batch metrics and BJCP comparison">
+            <figcaption>Style context without presenting it as a score</figcaption>
+          </figure>
+          <figure class="screenshot-card reveal">
+            <img src="assets/screenshot-insights.jpg" width="603" height="1311" loading="lazy" alt="BrewMath experiment insights screen">
+            <figcaption>The next recipe starts with your tasting history</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container loop-grid">
+        <div>
+          <p class="eyebrow">One optional upgrade</p>
+          <h2 id="pricing-title">One payment. <em>No subscription.</em></h2>
+          <p class="section-lead">
+            Every calculator, unlimited batches, change tracking and tasting notes stay free.
+            BrewMath Pro adds the tools that turn the history into a repeatable process.
+          </p>
+          <div class="hero-actions">
+            <a class="button secondary" href="#release-status" data-app-store aria-disabled="true">
+              <span data-store-label>Coming to the App Store</span>
+            </a>
+          </div>
+        </div>
+        <div class="compare-grid" style="grid-template-columns:1fr">
+          <article class="content-card reveal">
+            <h3>BrewMath Pro · planned $9.99 once</h3>
+            <ul class="plain-list">
+              <li>Insight view and recipe family tree</li>
+              <li>Permanent house-recipe versions</li>
+              <li>PDF brew sheets for the brew day</li>
+              <li>Full JSON backup and restore tools</li>
+            </ul>
+            <p style="margin-top:18px">No recurring billing. Purchase and restore are handled by Apple.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="faq" aria-labelledby="faq-title">
+      <div class="container reading">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Common questions</p>
+            <h2 id="faq-title">Before you brew</h2>
+          </div>
+        </div>
+        <div class="faq-list faq">
+          <details open>
+            <summary>Is BrewMath an IBU calculator too?</summary>
+            <p>Yes. It includes Tinseth and Rager IBU models, hop-form corrections, whirlpool handling and a brew-day timer. ABV, gravity, priming sugar, strike water, colour, efficiency and water salts are included as well.</p>
+          </details>
+          <details>
+            <summary>Does BrewMath require an account or subscription?</summary>
+            <p>No. There is no BrewMath account and no subscription. All calculators and unlimited batches are free. One optional one-time Pro purchase unlocks insights, recipe history and export tools.</p>
+          </details>
+          <details>
+            <summary>Can BrewMath track brewing experiments?</summary>
+            <p>Yes. Every batch owns a frozen recipe snapshot. BrewMath compares it with the batch it came from, records tasting verdicts and can promote a repeatable version into a numbered house recipe.</p>
+          </details>
+          <details>
+            <summary>Does BrewMath work offline?</summary>
+            <p>Yes. Calculations, batch notes, recipes and reference tables work without a network connection. iCloud Drive backup is optional and uses your own Apple account.</p>
+          </details>
+          <details>
+            <summary>Are the calculators laboratory accurate?</summary>
+            <p>No brewing calculator can replace a laboratory measurement. BrewMath uses established public models and labels estimates honestly. Results can differ with ingredients, process and measurement technique.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <p class="eyebrow" style="justify-content:center">BrewMath for iPhone and iPad</p>
+          <h2>A better next batch starts with remembering the last one.</h2>
+          <p>Brew-day calculators, a complete recipe snapshot and a tasting history that helps your own process improve.</p>
+          <div class="hero-actions">
+            <a class="button" href="#release-status" data-app-store aria-disabled="true">
+              <span data-store-label>Coming to the App Store</span>
+            </a>
+            <a class="button secondary" href="support.html">Visit support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="BrewMath home">
+            <img src="assets/app-icon-96.png" width="36" height="36" alt="">
+            <span>BrewMath</span>
+          </a>
+          <p>An independent brewing calculator and notebook. Not affiliated with the BJCP, the Brewers Association, or any maltster.</p>
+        </div>
+        <div class="footer-links">
+          <h2>Product</h2>
+          <a href="#calculators">Calculators</a>
+          <a href="#experiment-loop">Experiment loop</a>
+          <a href="data-sources.html">Data sources</a>
+        </div>
+        <div class="footer-links">
+          <h2>Help</h2>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:support@brewmath.app" data-support-email data-show-email="true">support@brewmath.app</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> BrewMath.</span>
+        <span>Calculations are estimates, not laboratory measurements.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

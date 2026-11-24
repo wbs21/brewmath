@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrewMath Data Sources &amp; Brewing Formulas</title>
+  <meta name="description" content="See the BJCP editions, brewing formulas, ingredient references and stated limits behind BrewMath's IBU, ABV, gravity, colour, carbonation and water calculations.">
+  <meta name="theme-color" content="#120e0a">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://brewmath.app/data-sources.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/app-icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="BrewMath Data Sources &amp; Brewing Formulas">
+  <meta property="og:description" content="The public references and stated limits behind BrewMath's brewing calculations.">
+  <meta property="og:url" content="https://brewmath.app/data-sources.html">
+  <meta property="og:image" content="https://brewmath.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "BrewMath Data Sources and Brewing Formula References",
+    "description": "Public style references, brewing formulas and ingredient sources used by BrewMath, including known calculation limits.",
+    "url": "https://brewmath.app/data-sources.html",
+    "dateModified": "2026-11-24",
+    "inLanguage": "en-US"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="BrewMath home">
+        <img src="assets/app-icon-96.png" width="36" height="36" alt="">
+        <span>BrewMath</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+        <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+        <a href="index.html#calculators">Calculators</a>
+        <a href="data-sources.html" aria-current="page">Data sources</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="button small" href="#release-status" data-app-store aria-disabled="true">
+          <span data-store-label>Coming to the App Store</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Sources, formulas and limits</p>
+        <h1>Numbers should have a trail.</h1>
+        <p>BrewMath uses public brewing models, official style ranges and traceable ingredient references. This page explains the basis of those numbers and where an estimate should not be treated as a measurement.</p>
+        <p class="page-meta">Data catalog version 2026.11.24 · Updated 24 November 2026</p>
+      </div>
+    </section>
+
+    <article class="article">
+      <div class="reading">
+        <div class="legal-card">
+          <strong>Important:</strong>
+          <p style="margin:8px 0 0;color:var(--muted)">IBU, ABV, colour, carbonation and water calculations are estimates. Ingredient age, process, equipment and measurement error can all matter more than small formula differences.</p>
+        </div>
+
+        <h2>BJCP style ranges</h2>
+        <p>BrewMath extracts only the official style codes, names and numerical ranges. Flavour descriptions are not copied from the guidelines. Style context is shown for comparison, not as a score or certification.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th scope="col">Dataset</th><th scope="col">Official version</th><th scope="col">Records</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Beer</td><td>2021 Guidelines v1.25</td><td>128</td></tr>
+            <tr><td>Mead</td><td>2026 Guidelines</td><td>17</td></tr>
+            <tr><td>Cider</td><td>2025 Guidelines v2</td><td>9</td></tr>
+          </tbody>
+        </table>
+        <p>Official references:</p>
+        <ul>
+          <li><a href="https://www.bjcp.org/wp-content/uploads/2025/02/2021_Guidelines_Beer_1.25.pdf" rel="noopener">BJCP 2021 Beer Guidelines v1.25</a></li>
+          <li><a href="https://www.bjcp.org/wp-content/uploads/2026/08/2026_Guidelines_Mead-final.pdf" rel="noopener">BJCP 2026 Mead Guidelines</a></li>
+          <li><a href="https://www.bjcp.org/wp-content/uploads/2026/08/2025_Guidelines_Cider_v2_final.pdf" rel="noopener">BJCP 2025 Cider Guidelines v2</a></li>
+        </ul>
+        <p>BrewMath is not affiliated with or endorsed by the Beer Judge Certification Program.</p>
+
+        <h2>Alcohol formulas</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th scope="col">Result</th><th scope="col">Implementation</th><th scope="col">Limit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Simple ABV</td><td>(OG − FG) × 131.25</td><td>Common homebrewing approximation</td></tr>
+            <tr><td>Hall ABV</td><td>High-gravity correction formula</td><td>Automatically featured around OG 1.070 and above</td></tr>
+            <tr><td>ABW</td><td>ABV × 0.794 / FG</td><td>Adjusted for final gravity</td></tr>
+            <tr><td>Apparent attenuation</td><td>Gravity-points definition</td><td>Not the same as real attenuation</td></tr>
+          </tbody>
+        </table>
+        <p>The 1.070 switch is a product heuristic, not a hard scientific boundary. Both estimates remain visible so the model choice is not hidden.</p>
+
+        <h2>IBU models</h2>
+        <p>BrewMath implements both Tinseth and Rager. Hop-form corrections include pellet, whole-leaf and hop-plug assumptions. Dry hopping contributes 0 IBU in the bitterness model because aroma, flavour and polyphenol extraction are outside IBU.</p>
+        <p>Whirlpool bitterness uses an explicitly approximate half-time equivalent. There is no universal model that captures every commercial kettle, whirlpool and cooling system.</p>
+
+        <h2>Gravity, Brix and colour</h2>
+        <ul>
+          <li>Specific gravity and °Plato conversion uses a common cubic approximation of ASBC reference values.</li>
+          <li>Brix in BrewMath is a sucrose-equivalent conversion. It is not corrected for alcohol in a fermented sample.</li>
+          <li>Colour uses the Morey model and reports SRM with an approximate EBC conversion.</li>
+          <li>Recipe colour is an estimate and may differ from a measured laboratory result.</li>
+        </ul>
+
+        <h2>Carbonation</h2>
+        <p>Priming calculations account for residual CO₂ using the highest fermentation temperature, then estimate sugar against the volume actually packaged. Carbonation drops and sugar-source differences can change the result.</p>
+        <div class="note"><strong>Safety first:</strong> Packaging above the safe pressure range for a bottle creates a real risk of injury. Follow the bottle manufacturer's pressure rating and do not rely on a calculator to make an unsafe package safe.</div>
+
+        <h2>Water chemistry</h2>
+        <p>Salt additions use chemical formulas and molar masses, including water of crystallisation. Residual alkalinity uses the Kolbach approximation. Mash strike temperature uses a heat-balance equation.</p>
+        <p>Your water report, grain temperature, equipment thermal mass and mineral assumptions can change the result. Calibrate against your own system rather than treating the first estimate as a fixed equipment profile.</p>
+
+        <h2>Ingredient data</h2>
+        <p>Ingredient records use manufacturer or breeding-program information where available. PPG, Lovibond, alpha acid, attenuation and temperature values are typical values, not guarantees for the package in front of you.</p>
+        <p>Common-reference entries are marked as unverified secondary data rather than being presented as manufacturer specifications. Manufacturer links may point to a current catalogue rather than one immutable product document.</p>
+
+        <h2>Versioned data and validation</h2>
+        <p>BrewMath's external reference data is stored as versioned JSON datasets with record IDs, dataset versions, source metadata and retrieval dates. Automated validation checks duplicate IDs, invalid ranges, non-finite values, source references and required metadata.</p>
+        <p>This makes the data inspectable and allows corrections to ship with an app update without reintroducing scattered hard-coded tables.</p>
+
+        <h2>What BrewMath does not claim</h2>
+        <ul>
+          <li>It does not claim laboratory accuracy.</li>
+          <li>It does not claim BJCP certification or endorsement.</li>
+          <li>It does not treat a flavour match as an official style classification.</li>
+          <li>It does not infer certainty when published models disagree.</li>
+          <li>It does not replace sensory judgement or measured process data.</li>
+        </ul>
+
+        <h2>Corrections</h2>
+        <p>To report a data correction, email <a href="mailto:support@brewmath.app" data-support-email data-show-email="true">support@brewmath.app</a> with the record, current value, proposed value and a public source URL.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="BrewMath home">
+            <img src="assets/app-icon-96.png" width="36" height="36" alt="">
+            <span>BrewMath</span>
+          </a>
+          <p>An independent brewing calculator and notebook. Not affiliated with the BJCP, the Brewers Association, or any maltster.</p>
+        </div>
+        <div class="footer-links">
+          <h2>Product</h2>
+          <a href="index.html">Home</a>
+          <a href="index.html#calculators">Calculators</a>
+          <a href="data-sources.html">Data sources</a>
+        </div>
+        <div class="footer-links">
+          <h2>Help</h2>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:support@brewmath.app" data-support-email data-show-email="true">support@brewmath.app</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> BrewMath.</span>
+        <span>Calculations are estimates, not laboratory measurements.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
