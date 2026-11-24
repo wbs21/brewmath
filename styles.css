@@ -206,7 +206,7 @@ a {
   transform: translateY(-1px);
 }
 
-.button[aria-disabled="true"] {
+.button.is-disabled {
   color: #c9b99f;
   background: var(--card-strong);
   border-color: var(--line);
@@ -1134,14 +1134,9 @@ a {
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 860px) {
   html {
     scroll-padding-top: 76px;
-  }
-
-  .container,
-  .reading {
-    width: min(calc(100% - 28px), var(--content));
   }
 
   .nav-shell {
@@ -1177,6 +1172,13 @@ a {
 
   .site-nav .button {
     margin-top: 5px;
+  }
+}
+
+@media (max-width: 740px) {
+  .container,
+  .reading {
+    width: min(calc(100% - 28px), var(--content));
   }
 
   .hero h1 {

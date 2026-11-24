@@ -17,15 +17,13 @@
         link.href = config.appStoreUrl;
         link.target = "_blank";
         link.rel = "noopener";
-        link.removeAttribute("aria-disabled");
         link.classList.remove("is-disabled");
         link.setAttribute("aria-label", "Download BrewMath on the App Store");
         if (label) label.textContent = "Download on the App Store";
       } else {
-        link.href = "#release-status";
+        link.href = "index.html#release-status";
         link.removeAttribute("target");
         link.removeAttribute("rel");
-        link.setAttribute("aria-disabled", "true");
         link.classList.add("is-disabled");
         link.setAttribute("aria-label", "BrewMath is preparing for App Store release");
         if (label) label.textContent = "Coming to the App Store";
