@@ -10,5 +10,5 @@ window.BREWMATH_CONFIG = {
   siteUrl: "https://brewmath.app",
   released: false,
   appStoreUrl: "",
-  supportEmail: "support@brewmath.app"
+  supportEmail: "13911100061@163.com"
 };

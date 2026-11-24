@@ -39,7 +39,7 @@
     });
 
     document.querySelectorAll("[data-support-email]").forEach(function (link) {
-      const email = config.supportEmail || "support@brewmath.app";
+      const email = config.supportEmail || "13911100061@163.com";
       link.href = "mailto:" + email;
       if (link.dataset.showEmail === "true") link.textContent = email;
     });

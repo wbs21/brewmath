@@ -22,7 +22,7 @@ Static, dependency-free marketing and support site for the BrewMath iOS app.
    - `/data-sources.html`
    - `/robots.txt`
    - `/sitemap.xml`
-3. Set up the `support@brewmath.app` mailbox or forwarding address.
+3. Confirm the `13911100061@163.com` mailbox can receive support email.
 4. Check the site on iPhone, iPad and desktop.
 
 ## App Store release day
