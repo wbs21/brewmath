@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://brewmath.app/sitemap.xml
+Sitemap: https://wbs21.github.io/brewmath/sitemap.xml

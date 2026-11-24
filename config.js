@@ -7,7 +7,7 @@
  * 3. Update sitemap.xml and the structured data date if the site changes.
  */
 window.BREWMATH_CONFIG = {
-  siteUrl: "https://brewmath.app",
+  siteUrl: "https://wbs21.github.io/brewmath",
   released: false,
   appStoreUrl: "",
   supportEmail: "13911100061@163.com"

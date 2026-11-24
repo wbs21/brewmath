@@ -14,7 +14,7 @@ Static, dependency-free marketing and support site for the BrewMath iOS app.
 
 ## Before deployment
 
-1. Publish this directory at `https://brewmath.app/` with HTTPS enabled.
+1. Publish this directory at `https://wbs21.github.io/brewmath/` with HTTPS enabled.
 2. Confirm these URLs return HTTP 200:
    - `/`
    - `/privacy.html`
@@ -30,19 +30,19 @@ Static, dependency-free marketing and support site for the BrewMath iOS app.
 1. Add the public App Store URL to `appStoreUrl` in `config.js`.
 2. Change `released` to `true` in `config.js`.
 3. Use the final App Store URL in App Store Connect for:
-   - Privacy Policy URL: `https://brewmath.app/privacy.html`
-   - Support URL: `https://brewmath.app/support.html`
-   - Marketing URL: `https://brewmath.app/`
+   - Privacy Policy URL: `https://wbs21.github.io/brewmath/privacy.html`
+   - Support URL: `https://wbs21.github.io/brewmath/support.html`
+   - Marketing URL: `https://wbs21.github.io/brewmath/`
 4. Recheck the App Store title, price and feature list against the website.
 5. Deploy again and verify the store buttons open the correct product page.
 
 ## Google indexing
 
-After the domain and HTTPS deployment are live:
+After the GitHub Pages deployment is live:
 
-1. Create a Google Search Console **Domain property** for `brewmath.app`.
-2. Verify DNS ownership.
-3. Submit `https://brewmath.app/sitemap.xml`.
+1. Create a Google Search Console **URL-prefix property** for `https://wbs21.github.io/brewmath/`.
+2. Verify ownership with the HTML verification file or meta tag supplied by Google.
+3. Submit `https://wbs21.github.io/brewmath/sitemap.xml`.
 4. Use URL Inspection for `/`, `/privacy.html`, `/support.html` and `/data-sources.html`, then request indexing for each.
 5. Validate structured data with Google's Rich Results Test.
 6. Submit the same sitemap to Bing Webmaster Tools.
@@ -50,9 +50,11 @@ After the domain and HTTPS deployment are live:
 
 Search Console verification does not add analytics or JavaScript tracking to the site.
 
+GitHub project Pages serves this site below `/brewmath/`. A `robots.txt` in that subdirectory is useful documentation, but search engines only treat a host-root `robots.txt` as authoritative. Sitemap submission from Search Console is the primary discovery method for this project URL.
+
 ## SEO maintenance
 
-- Keep one canonical hostname: `https://brewmath.app`.
+- Keep one canonical URL prefix: `https://wbs21.github.io/brewmath/`.
 - Update `lastmod` in `sitemap.xml` only when page content meaningfully changes.
 - Keep the App Store title consistent with the `<title>` and structured data.
 - Add future feature pages only when they answer a real brewing query; avoid thin duplicate pages.

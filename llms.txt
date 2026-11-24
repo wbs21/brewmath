@@ -4,10 +4,10 @@
 
 ## Canonical pages
 
-- [BrewMath home](https://brewmath.app/): app overview, calculator list, experiment loop and FAQ.
-- [Data sources](https://brewmath.app/data-sources.html): BJCP editions, brewing formula references and stated limitations.
-- [Support](https://brewmath.app/support.html): purchase restoration, backups, iCloud Drive and troubleshooting.
-- [Privacy](https://brewmath.app/privacy.html): no developer account, analytics or advertising; local data and optional user iCloud Drive backups.
+- [BrewMath home](https://wbs21.github.io/brewmath/): app overview, calculator list, experiment loop and FAQ.
+- [Data sources](https://wbs21.github.io/brewmath/data-sources.html): BJCP editions, brewing formula references and stated limitations.
+- [Support](https://wbs21.github.io/brewmath/support.html): purchase restoration, backups, iCloud Drive and troubleshooting.
+- [Privacy](https://wbs21.github.io/brewmath/privacy.html): no developer account, analytics or advertising; local data and optional user iCloud Drive backups.
 
 ## Product facts
 
