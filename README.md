@@ -9,7 +9,7 @@ Static, dependency-free marketing and support site for the BrewMath iOS app.
 - `support.html` — App Store support URL and troubleshooting.
 - `data-sources.html` — formulas, official references and limitation disclosures.
 - `robots.txt`, `sitemap.xml`, `llms.txt` — crawler discovery files.
-- `config.js` — single place to enable the App Store button after release.
+- `config.js` — public release state, App Store URL and support contact.
 - `_headers` — security and cache headers for hosts that support Netlify/Cloudflare-style header files.
 
 ## Before deployment
@@ -25,16 +25,21 @@ Static, dependency-free marketing and support site for the BrewMath iOS app.
 3. Confirm the `13911100061@163.com` mailbox can receive support email.
 4. Check the site on iPhone, iPad and desktop.
 
-## App Store release day
+## App Store release status
 
-1. Add the public App Store URL to `appStoreUrl` in `config.js`.
-2. Change `released` to `true` in `config.js`.
-3. Use the final App Store URL in App Store Connect for:
-   - Privacy Policy URL: `https://wbs21.github.io/brewmath/privacy.html`
-   - Support URL: `https://wbs21.github.io/brewmath/support.html`
-   - Marketing URL: `https://wbs21.github.io/brewmath/`
-4. Recheck the App Store title, price and feature list against the website.
-5. Deploy again and verify the store buttons open the correct product page.
+BrewMath 1.0 is live on the App Store. The website uses the country-neutral
+product link below so Apple can match visitors to their local storefront:
+
+`https://apps.apple.com/app/brewmath-brew-calculator/id6838584763`
+
+App Store Connect URLs:
+
+- Privacy Policy URL: `https://wbs21.github.io/brewmath/privacy.html`
+- Support URL: `https://wbs21.github.io/brewmath/support.html`
+- Marketing URL: `https://wbs21.github.io/brewmath/`
+
+After changing release information, verify that every `[data-app-store]` link
+opens the product page and update `sitemap.xml` plus structured-data dates.
 
 ## Google indexing
 

@@ -6,6 +6,14 @@
   "display": "standalone",
   "background_color": "#120e0a",
   "theme_color": "#120e0a",
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/brewmath-brew-calculator/id6838584763",
+      "id": "6838584763"
+    }
+  ],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/app-icon-192.png",

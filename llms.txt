@@ -13,6 +13,7 @@
 
 - App name: BrewMath: Brew Calculator
 - Platform: iPhone and iPad, iOS 18 or later
+- App Store: https://apps.apple.com/app/brewmath-brew-calculator/id6838584763
 - Business model: free calculators and unlimited batches, with one optional one-time Pro purchase
 - Account required: no
 - Advertising: no
